@@ -13,5 +13,5 @@ docker push moonrake/multi-worker:$GIT_SHA
 echo "Updating Production"
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=moonrake/multi-server:$GIT_SHA
-kubectl set image deployments/client-deployment server=moonrake/multi-client:$GIT_SHA
-kubectl set image deployments/worker-deployment server=moonrake/multi-worker:$GIT_SHA
+kubectl set image deployments/client-deployment client=moonrake/multi-client:$GIT_SHA
+kubectl set image deployments/worker-deployment worker=moonrake/multi-worker:$GIT_SHA
