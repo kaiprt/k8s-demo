@@ -16,7 +16,7 @@ before_install:
       curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - ;
       sudo apt-get update && sudo apt-get install google-cloud-sdk;
     fi
-  - glcoud components update kubectl
+  - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project k8s-multi-container-254418
   - gcloud config set compute/zone us-east1-c
