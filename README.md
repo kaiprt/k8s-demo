@@ -17,3 +17,8 @@ NOTE: This project is a sub-module to the master project [DevSecOps Demo](https:
 8. Note: We have configured our postgres database to use an encrypted secret. You will need to create your own secret that will hold your local postgres password (PGPASSWORD). Want to learn more? See [documentation](https://kubernetes.io/docs/concepts/configuration/secret/#overview-of-secrets)
 - Format of secret `kubectl create secret generic pgpassword --from-literal PGPASSWORD=YOUR_PASSWORD_HERE`
 9. Verify the secret was created: `kubectl get secrets | grep pgpassword`
+
+## Container Hardening
+
+### Setup
+We have purposly left security vulnerabilities ranging in severity.
